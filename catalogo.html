@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS aquí -->
+    <title>Catálogo - Ferretería El Tornillo Feliz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FEF5E7;
+            padding: 20px;
+        }
+        #texto {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #cargarCatalogo {
+            background-color: #c28708;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #cargarCatalogo:hover {
+            background-color: #d9a036;
+        }
+        #muestra {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #muestra th, #muestra td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        #muestra th {
+            background-color: #c28708;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="texto">
+        <h1>Catálogo</h1>
+        <button id="cargarCatalogo">Cargar Catálogo (XML)</button>
+    </div>
+    <table id="muestra"></table>
+    <script>
+        document.getElementById("cargarCatalogo").addEventListener("click", cargarCatalogo);
+        function cargarCatalogo(){
+            var xhr = new XMLHttpRequest(); 
+            xhr.onreadystatechange = function(){
+                if(this.readyState== 4 && this.status == 200){
+                    cargarXML(this);
+                } 
+            };
+            xhr.open("GET", "catalogo.xml", true);
+            xhr.send();
+        }
+        function cargarXML(xml){
+            var docXML = xml.responseXML;
+            var tabla = "<tr><th>Nombre</th><th>Descripcion</th><th>Origen</th><th>Precio</th><th>Stock</th></tr>";
+            var cds = docXML.getElementsByTagName("CD"); 
+            for (var i = 0; i<cds.length; i++){
+                tabla += "<tr><td>";
+                tabla += cds[i].getElementsByTagName("Nombre")[0].textContent;
+                tabla += "</td><td>";
+                tabla += cds[i].getElementsByTagName("Descripcion")[0].textContent;
+                tabla += "</td><td>";
+                tabla += cds[i].getElementsByTagName("Origen")[0].textContent; 
+                tabla += "</td><td>";
+                tabla += cds[i].getElementsByTagName("Precio")[0].textContent; 
+                tabla += "</td><td>";
+                tabla += cds[i].getElementsByTagName("Stock")[0].textContent;
+                tabla += "</td></tr>";
+            }
+            document.getElementById("muestra").innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>
