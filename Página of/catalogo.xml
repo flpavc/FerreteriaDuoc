@@ -1,0 +1,65 @@
+<CATALOGO>
+    <CD>
+        <Nombre>Taladro Eléctrico</Nombre>
+        <Descripcion>Taladro eléctrico de alta potencia, ideal para trabajos pesados.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$59.990</Precio> 
+        <Stock>100</Stock>
+    </CD> 
+    <CD>
+        <Nombre>Martillo</Nombre>
+        <Descripcion>Martillo resistente con mango de fibra de vidrio.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$7.990</Precio> 
+        <Stock>80</Stock>
+    </CD> 
+    <CD>
+        <Nombre>Destornillador</Nombre>
+        <Descripcion>Destornillador multipropósito con puntas intercambiables.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$4.990</Precio> 
+        <Stock>123</Stock>
+    </CD>       
+    <CD>
+        <Nombre>Llaves</Nombre>
+        <Descripcion>Conjunto variado de llaves para todas las necesidades domésticas.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$15.990</Precio> 
+        <Stock>76</Stock>
+    </CD> 
+    <CD>
+        <Nombre>Cintas</Nombre>
+        <Descripcion>Versátil cinta aisladora para múltiples reparaciones y proyectos.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$3.990</Precio> 
+        <Stock>80</Stock>
+    </CD> 
+    <CD>
+        <Nombre>Clavos</Nombre>
+        <Descripcion>Clavos resistentes para fijación segura en cualquier superficie.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$6.990</Precio> 
+        <Stock>134</Stock>
+    </CD>
+    <CD>
+        <Nombre>Maderas</Nombre>
+        <Descripcion> Maderas de calidad para construcciones sólidas y duraderas.</Descripcion>
+        <Origen>Chile</Origen>
+        <Precio>$15.990</Precio> 
+        <Stock>79</Stock>
+    </CD> 
+    <CD>
+        <Nombre>Sierras</Nombre>
+        <Descripcion>Potente sierra eléctrica para cortes precisos en diversos materiales.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$39.990</Precio> 
+        <Stock>237</Stock>
+    </CD>
+    <CD>
+        <Nombre>Cerámicas</Nombre>
+        <Descripcion> Cerámicas elegantes para dar vida a tus espacios favoritos.</Descripcion>
+        <Origen>USA</Origen>
+        <Precio>$49.990</Precio> 
+        <Stock>124</Stock>
+    </CD>   
+</CATALOGO>
